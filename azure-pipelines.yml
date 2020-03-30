@@ -23,3 +23,10 @@ steps:
       echo Write your commands here
       
       echo Hello world
+
+      
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'Artifact1'
+    publishLocation: 'Container'
